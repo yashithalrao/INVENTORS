@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SANSERA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="logo.png" alt="Sansera Logo" class="logo" />
+      <h1 class="title">SANSERA</h1>
+    </header>
+
+    <main class="main">
+      <button class="run-button" onclick="handleClick()">Run iLogic</button>
+    </main>
+  </div>
+
+  <script>
+    async function handleClick() {
+      console.log("button clicked");
+      await fetch("http://localhost:5000/run-ilogic", {
+        method: "POST",
+      });
+    }
+  </script>
+</body>
+</html>
